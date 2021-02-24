@@ -27,7 +27,7 @@ SECRET_KEY = '#r0lzaqm5w!q@_2=k(j+q1gk=$s^6#$^n7wb_1i9wka7dc=7x_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['damsenton-djago-todo-app.herokuapp.com']
 
 
 # Application definition
