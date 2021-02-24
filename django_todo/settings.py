@@ -18,18 +18,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get(
-    'SECRET_KEY', '2erm2g25fi&()6+d)rp0(1gw!vp^v2aoxpmfebc^1_2gbjc-@#')
+SECRET_KEY = ['2erm2g25fi&()6+d)rp0(1gw!vp^v2aoxpmfebc^1_2gbjc-@#']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG=True
 
-ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
+ALLOWED_HOSTS=[]
 
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS=[
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,7 +70,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# https: // docs.djangoproject.com/en/2.2/ref/settings /  # databases
 
 # DATABASES = {
 #     'default': {
@@ -80,9 +79,11 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 #     }
 # }
 
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse('postgres://zoqynjqoasbmlt:9ccfd67cbfeedc7799a97c804d4a193e6b1211944c37da0ab34b74d8e7832e0c@ec2-108-128-104-50.eu-west-1.compute.amazonaws.com:5432/di80aippnc0if')
 }
+
 
 
 # Password validation
